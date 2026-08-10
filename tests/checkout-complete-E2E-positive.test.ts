@@ -1,7 +1,7 @@
 import { test } from '../fixtures/fixture';
 import { BUTTON_TEXT, SUCCESS_MESSAGE, TAX_RATE } from '../test-data/constants';
 
-// For the case test, products with a specific price were selected 
+// For the case test, products with a specific price were selected
 // (some product prices have a bug BUG-004)
 test.describe('Successful order flow', () => {
   test('It is possible to complete the order flow with a successful result', async ({
@@ -12,7 +12,6 @@ test.describe('Successful order flow', () => {
     checkoutStepTwoPage,
     checkoutCompletePage,
   }) => {
-
     //inventory page
     const itemName1 = await inventoryPage.getItemNameByNumber(1);
     const itemName2 = await inventoryPage.getItemNameByNumber(2);

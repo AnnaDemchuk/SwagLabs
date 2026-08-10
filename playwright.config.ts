@@ -23,7 +23,7 @@ export default defineConfig({
     baseURL: process.env.BASE_URL,
     /* saucedemo.com uses `data-test` attributes instead of the default `data-testid`. */
     testIdAttribute: 'data-test',
-    
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',

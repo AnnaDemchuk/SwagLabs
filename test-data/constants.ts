@@ -14,8 +14,7 @@ export const BUTTON_TEXT = {
 };
 
 export const AUTH_ERROR_MESSAGES = {
-  invalidCredentials:
-    'Epic sadface: Username and password do not match any user in this service',
+  invalidCredentials: 'Epic sadface: Username and password do not match any user in this service',
   lockedOutUser: 'Epic sadface: Sorry, this user has been locked out.',
   usernameIsRequired: 'Epic sadface: Username is required',
   passwordIsRequired: 'Epic sadface: Password is required',

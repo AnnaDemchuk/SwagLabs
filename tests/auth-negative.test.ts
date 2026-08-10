@@ -18,6 +18,6 @@ test.describe('Invalid login data', () => {
 test.describe('Blocked user', () => {
   test(`It is impossible to login with blocked user`, async ({ loginPage }) => {
     await loginPage.login(LOCKED_OUT_USERNAME, STANDARD_USER_PASSWORD);
-     await loginPage.verifyErrorMessage(AUTH_ERROR_MESSAGES.lockedOutUser);
+    await loginPage.verifyErrorMessage(AUTH_ERROR_MESSAGES.lockedOutUser);
   });
 });
