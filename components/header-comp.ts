@@ -1,5 +1,6 @@
 import type { Locator, Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
+import { URLS } from '../test-data/constants';
 
 export class HeaderComponent {
   readonly page: Page;
@@ -15,7 +16,7 @@ export class HeaderComponent {
   async gotoCart() {
     await test.step('Should be able to go to cart', async () => {
       await this.cartLink.click();
-      await expect(this.page).toHaveURL(/cart\.html/);
+      await expect(this.page).toHaveURL(URLS.cart);
     });
   }
 

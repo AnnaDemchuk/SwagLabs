@@ -1,4 +1,4 @@
-import { test, expect } from '../fixtures/fixture';
+import { test } from '../fixtures/fixture';
 import {
   AUTH_ERROR_MESSAGES,
   LOCKED_OUT_USERNAME,
@@ -10,7 +10,7 @@ test.describe('Invalid login data', () => {
   for (const data of INVALID_LOGIN_CASES) {
     test(`Invalid login with ${data.title}`, async ({ loginPage }) => {
       await loginPage.login(data.username, data.password);
-      await expect(loginPage.errorMessage).toHaveText(data.expectedError);
+      await loginPage.verifyErrorMessage(data.expectedError);
     });
   }
 });

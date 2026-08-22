@@ -23,3 +23,12 @@ export const AUTH_ERROR_MESSAGES = {
 export const PAYMENT_INFORMATION = 'SauceCard #';
 
 export const SHIPPING_INFORMATION = 'Free Pony Express Delivery!';
+
+export const URLS = {
+  cart: '/cart\.html',
+  checkoutStepOne: '/checkout-step-one\.html',
+  checkoutStepTwo: '/checkout-step-two\.html',
+  checkoutComplete: '/checkout-complete\.html',
+  inventory: '/inventory\.html',
+  login: '/index\.html',
+}

@@ -1,5 +1,6 @@
 import type { Locator, Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
+import { URLS } from '../test-data/constants';
 
 export class CheckoutCompletePage {
   readonly page: Page;
@@ -22,7 +23,7 @@ export class CheckoutCompletePage {
   async clickBackHomeButton() {
     await test.step('Should be able to click back home button', async () => {
       await this.backHomeButton.click();
-      await expect(this.page).toHaveURL(/inventory\.html/);
+      await expect(this.page).toHaveURL(URLS.inventory);
     });
   }
 }
