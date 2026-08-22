@@ -1,6 +1,7 @@
 import type { Locator, Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 import { CartItemsComponent } from './../components/cart-items-comp';
+import { URLS } from '../test-data/constants';
 
 export class CartPage {
   readonly page: Page;
@@ -37,7 +38,7 @@ export class CartPage {
 
   async verifyUrlCartPage() {
     await test.step('Should verify cart page url', async () => {
-      await expect(this.page).toHaveURL(/cart\.html/);
+      await expect(this.page).toHaveURL(URLS.cart);
     });
   }
 

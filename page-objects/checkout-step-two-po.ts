@@ -1,7 +1,7 @@
 import type { Locator, Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 import { CartItemsComponent } from '../components/cart-items-comp';
-import { PAYMENT_INFORMATION, SHIPPING_INFORMATION } from '../test-data/constants';
+import { PAYMENT_INFORMATION, SHIPPING_INFORMATION, URLS } from '../test-data/constants';
 
 export class CheckoutStepTwoPage {
   readonly page: Page;
@@ -83,7 +83,7 @@ export class CheckoutStepTwoPage {
   async clickFinishButton() {
     await test.step('Should be able to click finish button', async () => {
       await this.finishButton.click();
-      await expect(this.page).toHaveURL(/checkout-complete\.html/);
+      await expect(this.page).toHaveURL(URLS.checkoutComplete);
     });
   }
 
